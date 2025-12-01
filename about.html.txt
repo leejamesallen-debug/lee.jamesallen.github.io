@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - The Dorset Bikers Club</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="events.html">Events</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<h1>About The Dorset Bikers Club</h1>
+<p>The Dorset Bikers Club was founded by Vinny Keeping in 2022. Our community brings together motorcycle enthusiasts across Dorset.</p>
+<p>We share events, rides, and all things bikes!</p>
+</body>
+</html>
