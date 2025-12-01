@@ -14,10 +14,11 @@
             color: #f5f5f5;
         }
 
+        /* Top nav */
         nav {
             text-align: center;
             padding: 15px 10px;
-            background: rgba(0,0,0,0.6);
+            background: rgba(0,0,0,0.85);
         }
 
         nav a {
@@ -31,6 +32,7 @@
             text-decoration: underline;
         }
 
+        /* Page wrapper */
         .page-wrapper {
             max-width: 1100px;
             margin: 0 auto;
@@ -83,6 +85,7 @@
             box-shadow: 0 6px 0 #b3751b;
         }
 
+        /* Tab content */
         .tab-content {
             display: none;
             margin-top: 10px;
@@ -96,11 +99,22 @@
             display: block;
         }
 
+        .tab-content h2 {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        .tab-content p {
+            color: #d0d0d0;
+        }
+
+        /* Image grid */
         .gallery-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
+            margin-top: 15px;
         }
 
         .gallery-grid img {
@@ -108,6 +122,7 @@
             width: 100%;
             border-radius: 10px;
             box-shadow: 0 6px 15px rgba(0,0,0,0.7);
+            border: 2px solid rgba(255,255,255,0.1);
         }
 
         @media (max-width: 600px) {
@@ -140,30 +155,46 @@
         <button class="tab-button" data-tab="cheddar-gorge-2025">Cheddar Gorge 17/08/2025</button>
     </div>
 
-    <!-- Santas Toy Ride -->
+    <!-- SANTAS TOY RIDE -->
     <div id="santas-toy-ride-2025" class="tab-content active">
         <h2>Santas Toy Ride 30/11/2025</h2>
+        <p>Photos coming soon.</p>
         <div class="gallery-grid">
-            <!-- Update these when you add real images -->
-            <p>No photos uploaded yet.</p>
+            <!-- Add images here later, e.g.:
+            <img src="assets/gallery/santas-toy-ride-2025/Pic1.jpeg" alt="Santas Toy Ride Photo 1">
+            -->
         </div>
     </div>
 
-    <!-- Swanage -->
+    <!-- SWANAGE -->
     <div id="swanage-2025" class="tab-content">
         <h2>Swanage 12/10/2025</h2>
+        <p>Photos from the Swanage ride.</p>
         <div class="gallery-grid">
-            <!-- This matches your real file: assets/gallery/swanage-2025/s1.jpeg -->
-            <img src="assets/gallery/swanage-2025/s1.jpeg" alt="Swanage 2025 Photo 1">
+            <img src="assets/gallery/swanage-2025/S1.jpeg" alt="Swanage Photo 1">
+            <img src="assets/gallery/swanage-2025/S2.jpeg" alt="Swanage Photo 2">
+            <img src="assets/gallery/swanage-2025/S3.jpeg" alt="Swanage Photo 3">
+            <img src="assets/gallery/swanage-2025/S4.jpeg" alt="Swanage Photo 4">
+            <img src="assets/gallery/swanage-2025/S5.jpeg" alt="Swanage Photo 5">
+            <img src="assets/gallery/swanage-2025/S6.jpeg" alt="Swanage Photo 6">
+            <img src="assets/gallery/swanage-2025/S7.jpeg" alt="Swanage Photo 7">
+            <img src="assets/gallery/swanage-2025/S8.jpeg" alt="Swanage Photo 8">
+            <img src="assets/gallery/swanage-2025/S9.jpeg" alt="Swanage Photo 9">
+            <img src="assets/gallery/swanage-2025/S10.jpeg" alt="Swanage Photo 10">
+            <img src="assets/gallery/swanage-2025/S11.jpeg" alt="Swanage Photo 11">
+            <img src="assets/gallery/swanage-2025/S12.jpeg" alt="Swanage Photo 12">
+            <img src="assets/gallery/swanage-2025/S13.jpeg" alt="Swanage Photo 13">
         </div>
     </div>
 
-    <!-- Cheddar Gorge -->
+    <!-- CHEDDAR GORGE -->
     <div id="cheddar-gorge-2025" class="tab-content">
         <h2>Cheddar Gorge 17/08/2025</h2>
+        <p>Photos coming soon.</p>
         <div class="gallery-grid">
-            <!-- Update when you add images -->
-            <p>No photos uploaded yet.</p>
+            <!-- Add images here later, e.g.:
+            <img src="assets/gallery/cheddar-gorge-2025/Pic1.jpeg" alt="Cheddar Gorge Photo 1">
+            -->
         </div>
     </div>
 
