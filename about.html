@@ -18,7 +18,7 @@
     nav {
         text-align: center;
         padding: 14px 8px;
-        background-color: #001326; /* same navy as homepage */
+        background-color: #001326; /* deep navy */
     }
 
     nav a {
@@ -44,7 +44,7 @@
     h1 {
         font-size: 2rem;
         margin-bottom: 20px;
-        color: #ff3b3b; /* red accent like homepage */
+        color: #ff3b3b; /* red accent */
     }
 
     p {
@@ -52,6 +52,23 @@
         line-height: 1.6;
         margin-bottom: 18px;
     }
+
+    /* Image layout */
+    .founder-images {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap; /* allows stacking on mobile */
+    }
+
+    .founder-images img {
+        max-width: 380px;
+        width: 90%;
+        border-radius: 18px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+    }
+
 </style>
 </head>
 <body>
@@ -73,6 +90,12 @@
     <p>The Dorset Bikers Club was founded by Vinny Keeping in 2022. Our community brings together motorcycle enthusiasts from all across Dorset and beyond.</p>
 
     <p>We are a friendly, welcoming club that enjoys ride-outs, social events, meeting new riders, and supporting good causes within the biking community.</p>
+
+    <!-- TWO IMAGE LAYOUT -->
+    <div class="founder-images">
+        <img src="assets/images/vin.jpeg" alt="Founder Vinny Keeping">
+        <img src="assets/images/vin1.jpeg" alt="Founder Vinny Keeping">
+    </div>
 
 </div>
 
