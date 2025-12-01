@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - The Dorset Bikers Club</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="events.html">Events</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<h1>Contact Us</h1>
+<p>Email us at:</p>
+<p><a href="mailto:info@thedorsetbikersclub.co.uk">info@thedorsetbikersclub.co.uk</a></p>
+<p><a href="mailto:sales@thedorsetbikersclub.co.uk">sales@thedorsetbikersclub.co.uk</a></p>
+<p><a href="mailto:media@thedorsetbikersclub.co.uk">media@thedorsetbikersclub.co.uk</a></p>
+
+<h2>Follow Us</h2>
+<p>
+    <a class="social-btn instagram" href="https://instagram.com/thedorsetbikersclub" target="_blank">Instagram</a>
+    <a class="social-btn youtube" href="https://www.youtube.com/@thedorsetbikersclub" target="_blank">YouTube</a>
+    <a class="social-btn tiktok" href="https://www.tiktok.com/@thedorsetbikersclub" target="_blank">TikTok</a>
+    <a class="social-btn facebook" href="https://www.facebook.com/share/g/16Ewnhjz7x/?mibextid=wwXIfr" target="_blank">Facebook Group</a>
+</p>
+</body>
+</html>
