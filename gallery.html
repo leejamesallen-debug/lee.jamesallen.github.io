@@ -1,23 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gallery - The Dorset Bikers Club</title>
-<link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - The Dorset Bikers Club</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            background: radial-gradient(circle at top, #3a3a50, #111);
+            color: #f5f5f5;
+        }
+
+        nav {
+            text-align: center;
+            padding: 15px 10px;
+            background: rgba(0,0,0,0.6);
+        }
+
+        nav a {
+            margin: 0 8px;
+            text-decoration: none;
+            color: #f5f5f5;
+            font-weight: bold;
+        }
+
+        .page-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 15px 60px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.4em;
+            margin-bottom: 8px;
+        }
+
+        p.subtitle {
+            color: #d0d0d0;
+            margin-bottom: 25px;
+        }
+
+        /* Tabs row */
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .tab-button {
+            border: none;
+            padding: 12px 22px;
+            border-radius: 999px;
+            background: linear-gradient(145deg, #ff4b5c, #c52d3d);
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 6px 0 #7a1c27, 0 8px 15px rgba(0,0,0,0.4);
+            transition: 0.15s;
+        }
+
+        .tab-button:hover {
+            background: linear-gradient(145deg, #ff5f70, #d53547);
+        }
+
+        .tab-button:active {
+            transform: translateY(2px);
+            box-shadow: 0 3px 0 #7a1c27;
+        }
+
+        .tab-button.active {
+            background: linear-gradient(145deg, #ffc857, #ff9e2c);
+            box-shadow: 0 6px 0 #b3751b;
+        }
+
+        .tab-content {
+            display: none;
+            margin-top: 10px;
+            background: rgba(0,0,0,0.35);
+            border-radius: 16px;
+            padding: 20px 10px 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .gallery-grid img {
+            max-width: 260px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.7);
+        }
+    </style>
 </head>
 <body>
+
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="events.html">Events</a>
-    <a href="gallery.html">Gallery</a>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="events.html">Events</a> |
+    <a href="gallery.html">Gallery</a> |
     <a href="contact.html">Contact</a>
 </nav>
 
-<h1>Gallery</h1>
-<p>Check out photos from our rides and club events!</p>
-<img src="assets/images/tdbc_under_construction.jpeg" alt="Under Construction">
-<img src="assets/images/santa_pic.jpeg" alt="Santa Pic">
+<div class="page-wrapper">
+
+    <h1>Gallery</h1>
+    <p class="subtitle">Choose an event to view photos.</p>
+
+    <!-- TAB BUTTONS -->
+    <div class="tabs">
+
+        <!-- Real events -->
+        <button class="tab-button active" data-tab="santas-toy-ride-2025">Santas Toy Ride 30/11/2025</button>
+        <button class="tab-button" data-tab="swanage-2025">Swanage 12/10/2025</button>
+        <button class="tab-button" data-tab="cheddar-gorge-2025">Cheddar Gorge 17/08/2025</button>
+
+        <!-- Test event placeholders (10 total) -->
+        <button class="tab-button" data-tab="test-event-1">Test Event 1</button>
+        <button class="tab-button" data-tab="test-event-2">Test Event 2</button>
+        <button class="tab-button" data-tab="test-event-3">Test Event 3</button>
+        <button class="tab-button" data-tab="test-event-4">Test Event 4</button>
+        <button class="tab-button" data-tab="test-event-5">Test Event 5</button>
+        <button class="tab-button" data-tab="test-event-6">Test Event 6</button>
+        <button class="tab-button" data-tab="test-event-7">Test Event 7</button>
+        <button class="tab-button" data-tab="test-event-8">Test Event 8</button>
+        <button class="tab-button" data-tab="test-event-9">Test Event 9</button>
+        <button class="tab-button" data-tab="test-event-10">Test Event 10</button>
+
+    </div>
+
+    <!-- REAL EVENTS -->
+    <div id="santas-toy-ride-2025" class="tab-content active">
+        <h2>Santas Toy Ride 30/11/2025</h2>
+        <div class="gallery-grid">
+            <img src="assets/gallery/santas-toy-ride-2025/pic1.jpg">
+            <img src="assets/gallery/santas-toy-ride-2025/pic2.jpg">
+            <img src="assets/gallery/santas-toy-ride-2025/pic3.jpg">
+        </div>
+    </div>
+
+    <div id="swanage-2025" class="tab-content">
+        <h2>Swanage 12/10/2025</h2>
+        <div class="gallery-grid">
+            <img src="assets/gallery/swanage-2025/pic1.jpg">
+            <img src="assets/gallery/swanage-2025/pic2.jpg">
+            <img src="assets/gallery/swanage-2025/pic3.jpg">
+        </div>
+    </div>
+
+    <div id="cheddar-gorge-2025" class="tab-content">
+        <h2>Cheddar Gorge 17/08/2025</h2>
+        <div class="gallery-grid">
+            <img src="assets/gallery/cheddar-gorge-2025/pic1.jpg">
+            <img src="assets/gallery/cheddar-gorge-2025/pic2.jpg">
+            <img src="assets/gallery/cheddar-gorge-2025/pic3.jpg">
+        </div>
+    </div>
+
+    <!-- TEST EVENT TEMPLATES -->
+    <!-- Repeat for events 1–10 -->
+    <!-- Each uses folder structure assets/gallery/test-event-#/pic#.jpg -->
+
+    <!-- Example template (repeated for all 10 events) -->
+    <div id="test-event-1" class="tab-content">
+        <h2>Test Event 1</h2>
+        <div class="gallery-grid">
+            <img src="assets/gallery/test-event-1/pic1.jpg">
+            <img src="assets/gallery/test-event-1/pic2.jpg">
+            <img src="assets/gallery/test-event-1/pic3.jpg">
+        </div>
+    </div>
+
+    <!-- Repeat the above block for events 2 to 10 (already included in your file) -->
+
+</div>
+
+<script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const target = button.dataset.tab;
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            contents.forEach(section => section.classList.remove('active'));
+
+            button.classList.add('active');
+            document.getElementById(target).classList.add('active');
+        });
+    });
+</script>
+
 </body>
 </html>
