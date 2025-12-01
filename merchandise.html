@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merchandise - The Dorset Bikers Club</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #001B3A; /* same blue as homepage */
+        color: #f5f5f5;
+        text-align: center;
+    }
+
+    /* Navigation Bar */
+    nav {
+        text-align: center;
+        padding: 14px 8px;
+        background-color: #001326; /* same navy as homepage */
+    }
+
+    nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #f5d27a; /* gold */
+        font-weight: bold;
+        font-size: 1.05rem;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* Page wrapper */
+    .page-wrapper {
+        max-width: 900px;
+        margin: 40px auto 60px;
+        padding: 0 16px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #ff3b3b; /* red accent */
+    }
+
+    p.intro {
+        font-size: 1.05rem;
+        margin-bottom: 26px;
+        color: #f5d27a;
+    }
+
+    p.body-text {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+
+    /* 3D Merch Button Grid (matching gallery tab style) */
+    .merch-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+        margin-bottom: 30px;
+    }
+
+    .merch-button {
+        border: none;
+        padding: 12px 26px;
+        border-radius: 999px;
+        background: linear-gradient(145deg, #ff4b5c, #c52d3d); /* red gradient like gallery tabs */
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 0.98rem;
+        cursor: pointer;
+        box-shadow: 0 6px 0 #7a1c27, 0 8px 15px rgba(0,0,0,0.4);
+        transition: 0.15s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        min-width: 130px;
+    }
+
+    .merch-button:hover {
+        background: linear-gradient(145deg, #ff5f70, #d53547);
+        transform: translateY(-1px);
+    }
+
+    .merch-button:active {
+        transform: translateY(2px);
+        box-shadow: 0 3px 0 #7a1c27;
+    }
+
+    /* Section for short descriptions */
+    .merch-notes {
+        text-align: left;
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 0.98rem;
+        line-height: 1.6;
+    }
+
+    .merch-notes h2 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+        color: #f5d27a;
+    }
+
+    .merch-notes ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .merch-notes li {
+        margin-bottom: 8px;
+    }
+
+    @media (max-width: 600px) {
+        .merch-button {
+            width: 100%;
+            max-width: 260px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="events.html">Events</a> |
+    <a href="gallery.html">Gallery</a> |
+    <a href="merchandise.html">Merchandise</a> |
+    <a href="links.html">Links</a>
+</nav>
+
+<div class="page-wrapper">
+
+    <h1>Club Merchandise</h1>
+    <p class="intro">Show your support for The Dorset Bikers Club with official club gear and essentials.</p>
+
+    <p class="body-text">
+        Our merchandise range is designed for real riders — practical on the bike, smart enough for meets,
+        and always flying the Dorset Bikers colours with pride. Stock, designs and sizes will grow over time,
+        so keep an eye on this page and our social media for new drops and pre-order announcements.
+    </p>
+
+    <!-- 3D BUTTON GRID -->
+    <div class="merch-grid">
+        <button class="merch-button">Shirts</button>
+        <button class="merch-button">Hoodies</button>
+        <button class="merch-button">Hats</button>
+        <button class="merch-button">Gloves</button>
+        <button class="merch-button">Bags</button>
+        <button class="merch-button">Tools</button>
+        <button class="merch-button">Essentials</button>
+        <button class="merch-button">Mugs</button>
+        <button class="merch-button">Key Rings</button>
+    </div>
+
+    <!-- Brief descriptions -->
+    <div class="merch-notes">
+        <h2>What We Offer</h2>
+        <ul>
+            <li><strong>Shirts & Hoodies</strong> – Club-branded casual wear for ride-outs, meets and everyday use.</li>
+            <li><strong>Hats & Gloves</strong> – Caps, beanies and light gloves to keep you comfortable on and off the bike.</li>
+            <li><strong>Bags & Essentials</strong> – Practical kit for carrying your gear, plus everyday items no rider should be without.</li>
+            <li><strong>Tools</strong> – Handy basic tools and small bits to help with quick adjustments and checks.</li>
+            <li><strong>Mugs & Key Rings</strong> – Perfect for the garage, office or as gifts for fellow Dorset Bikers.</li>
+        </ul>
+
+        <p style="margin-top: 18px;">
+            Full product details, prices and ordering information will be added soon.
+            In the meantime, keep an eye on our <a href="links.html" style="color:#ffdd7a; font-weight:bold; text-decoration:none;">Links</a> page
+            and social media channels for the latest announcements.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
