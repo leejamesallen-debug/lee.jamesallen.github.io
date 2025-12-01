@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - The Dorset Bikers Club</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="events.html">Events</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<h1>UNDER CONSTRUCTION</h1>
+<p>@thedorsetbikersclub</p>
+<img src="assets/images/tdbc_under_construction.jpeg" alt="Under Construction">
+<p class="statement">The Dorset Bikers Club Founded By Vinny Keeping 2022</p>
+<img src="assets/images/santa_pic.jpeg" alt="Santa Pic">
+<a class="social-btn instagram" href="https://instagram.com/thedorsetbikersclub" target="_blank">Follow Instagram</a>
+</body>
+</html>
