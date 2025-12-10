@@ -13,7 +13,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #001B3A;
+            background-color: #001B3A; /* dark navy */
             color: #f5f5f5;
         }
 
@@ -36,75 +36,147 @@
             text-decoration: underline;
         }
 
-        /* Main page wrapper */
-        .page-wrapper {
-            max-width: 900px;
+        /* HERO SECTION */
+        .hero {
+            min-height: 70vh;
+            padding: 60px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            /* Background: gradient + optional hero image */
+            background:
+                linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+                url("assets/images/home-hero.jpg") center center / cover no-repeat;
+        }
+
+        /* If you don't have a hero image yet, this keeps it looking good */
+        @media (prefers-reduced-motion: no-preference) {
+            .hero {
+                background-color: #001B3A;
+                background-blend-mode: overlay;
+            }
+        }
+
+        .hero-inner {
+            max-width: 800px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #ff3b3b; /* red accent */
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 24px;
+            color: #f5d27a; /* light gold */
+        }
+
+        .hero-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            color: #f5f5f5;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 999px;
+            border: none;
+            background: linear-gradient(135deg, #ff3b3b, #ff7a3b);
+            color: #fff;
+            font-weight: bold;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 6px 0 #9d2a2a, 0 8px 18px rgba(0,0,0,0.5);
+            cursor: pointer;
+            transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+        }
+
+        .hero-btn:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+            box-shadow: 0 7px 0 #9d2a2a, 0 12px 24px rgba(0,0,0,0.6);
+        }
+
+        .hero-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 3px 0 #9d2a2a, 0 6px 14px rgba(0,0,0,0.5);
+        }
+
+        /* INFO STRIP UNDER HERO */
+        .info-strip {
+            max-width: 1000px;
             margin: 40px auto 60px;
             padding: 0 16px;
+        }
+
+        .info-heading {
             text-align: center;
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+            color: #f5d27a;
         }
 
-        h1 {
-            margin: 0 0 18px;
-            font-size: 2.4rem;
-            font-weight: bold;
-            letter-spacing: 0.06em;
-            color: #ff3b3b;
+        .info-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #e0e0e0;
+            font-size: 0.98rem;
         }
 
-        .statement {
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .info-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 14px;
+            padding: 18px 16px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.45);
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
             font-size: 1.15rem;
-            font-weight: bold;
-            color: #f5d27a;
-            margin-top: 20px;
+            color: #ffcf5f;
         }
 
-        .logo-wrapper {
-            margin: 18px auto 20px;
+        .info-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #e4e4e4;
+            line-height: 1.5;
         }
 
-        .logo-wrapper img {
-            max-width: 420px;
-            width: 95%;
-            border-radius: 18px;
-            display: block;
-            margin: 0 auto;
-        }
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 16px;
+                min-height: 65vh;
+            }
 
-        /* SOCIAL ICON SECTION */
-        .social-section {
-            margin-top: 50px;
-            padding-top: 25px;
-            border-top: 2px solid rgba(255, 255, 255, 0.15);
-        }
+            .hero-title {
+                font-size: 2.2rem;
+            }
 
-        .social-title {
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-bottom: 18px;
-            letter-spacing: 0.03em;
-            color: #f5d27a;
-        }
+            .hero-subtitle {
+                font-size: 1.15rem;
+            }
 
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 28px;
-            flex-wrap: wrap;
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
         }
-
-        .social-icons img {
-            height: 78px;
-            width: auto;
-            transition: transform .15s ease, filter .15s ease;
-            cursor: pointer;
-        }
-
-        .social-icons img:hover {
-            transform: scale(1.08);
-            filter: brightness(1.1);
-        }
-
     </style>
 </head>
 <body>
@@ -112,50 +184,59 @@
     <nav>
         <a href="index.html">Home</a> |
         <a href="about.html">About</a> |
-        <a href="contact.html">Contact</a> |
         <a href="events.html">Events</a> |
         <a href="gallery.html">Gallery</a> |
         <a href="merchandise.html">Merchandise</a> |
-        <a href="links.html">Links</a>
+        <a href="links.html">Links</a> |
+        <a href="contact.html">Contact</a>
     </nav>
 
-    <div class="page-wrapper">
-
-        <h1>PAGE UNDER CONSTRUCTION</h1>
-
-        <div class="logo-wrapper">
-            <img src="assets/images/tdbc_under_construction.jpeg" alt="Dorset Bikers Logo">
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-inner">
+            <h1 class="hero-title">Dorset Bikers Club</h1>
+            <p class="hero-subtitle">Friendly rides • Great people • Proper Dorset roads</p>
+            <p class="hero-text">
+                A welcoming motorcycle community for riders of all experience levels across Dorset.
+                From coastal runs and charity ride-outs to café meets and evening socials, there’s
+                always a ride – and a brew – on the go.
+            </p>
+            <a href="events.html" class="hero-btn">View Upcoming Rides</a>
         </div>
+    </section>
 
-        <p class="statement">
-            The Dorset Bikers Club Founded By Vinny Keepin 2022
+    <!-- INFO STRIP -->
+    <section class="info-strip">
+        <h2 class="info-heading">More Than Just a Ride</h2>
+        <p class="info-intro">
+            Whether you’re on your first 125 or your tenth bike, you’ll find friendly faces,
+            safe group riding and plenty of laughs along the way.
         </p>
 
-        <div class="social-section">
-            <div class="social-title">Follow The Dorset Bikers Club</div>
-
-            <div class="social-icons">
-
-                <a href="https://www.instagram.com/thedorsetbikersclub" target="_blank">
-                    <img src="icons/instagram.png" alt="Instagram">
-                </a>
-
-                <a href="https://www.tiktok.com/@thedorsetbikersclub" target="_blank">
-                    <img src="icons/tiktok.png" alt="TikTok">
-                </a>
-
-                <a href="https://www.youtube.com/channel/UC4dnX3f9ZJ4Aa8exSbyEvJw" target="_blank">
-                    <img src="icons/youtube.png" alt="YouTube">
-                </a>
-
-                <a href="https://www.facebook.com/share/19wVzz8EZD/?mibextid=wwXIfr" target="_blank">
-                    <img src="icons/facebook.png" alt="Facebook">
-                </a>
-
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Regular Ride-Outs</h3>
+                <p>
+                    Planned group rides around Dorset, the coast and beyond – sensible pace, clear routes
+                    and plenty of fuel and coffee stops.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>All Riders Welcome</h3>
+                <p>
+                    New riders, returning bikers and seasoned riders are all welcome. No attitude,
+                    no pressure – just a good, safe ride.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>Events & Charity Runs</h3>
+                <p>
+                    From toy runs and fundraising events to summer meets and evening socials, there’s
+                    always something in the calendar.
+                </p>
             </div>
         </div>
-
-    </div>
+    </section>
 
 </body>
 </html>
