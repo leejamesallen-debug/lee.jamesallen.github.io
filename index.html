@@ -6,14 +6,10 @@
     <title>The Dorset Bikers Club</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #001B3A; /* dark navy */
+            background-color: #001B3A;
             color: #f5f5f5;
         }
 
@@ -38,142 +34,62 @@
 
         /* HERO SECTION */
         .hero {
-            min-height: 70vh;
-            padding: 60px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 60px 20px 40px;
             text-align: center;
-
-            /* Background: gradient + optional hero image */
-            background:
-                linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-                url("assets/images/home-hero.jpg") center center / cover no-repeat;
-        }
-
-        /* If you don't have a hero image yet, this keeps it looking good */
-        @media (prefers-reduced-motion: no-preference) {
-            .hero {
-                background-color: #001B3A;
-                background-blend-mode: overlay;
-            }
-        }
-
-        .hero-inner {
-            max-width: 800px;
         }
 
         .hero-title {
             font-size: 3rem;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             letter-spacing: 0.08em;
+            color: #ff3b3b;
             text-transform: uppercase;
-            color: #ff3b3b; /* red accent */
         }
 
         .hero-subtitle {
             font-size: 1.3rem;
-            margin-bottom: 24px;
-            color: #f5d27a; /* light gold */
+            color: #f5d27a;
+            margin-bottom: 20px;
         }
 
         .hero-text {
+            max-width: 700px;
+            margin: 0 auto;
             font-size: 1rem;
-            line-height: 1.7;
-            margin-bottom: 30px;
-            color: #f5f5f5;
+            line-height: 1.6;
+            color: #e0e0e0;
         }
 
-        .hero-btn {
-            display: inline-block;
-            padding: 12px 28px;
-            border-radius: 999px;
-            border: none;
-            background: linear-gradient(135deg, #ff3b3b, #ff7a3b);
-            color: #fff;
-            font-weight: bold;
-            font-size: 1rem;
-            text-decoration: none;
-            box-shadow: 0 6px 0 #9d2a2a, 0 8px 18px rgba(0,0,0,0.5);
-            cursor: pointer;
-            transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
-        }
-
-        .hero-btn:hover {
-            opacity: 0.95;
-            transform: translateY(-1px);
-            box-shadow: 0 7px 0 #9d2a2a, 0 12px 24px rgba(0,0,0,0.6);
-        }
-
-        .hero-btn:active {
-            transform: translateY(1px);
-            box-shadow: 0 3px 0 #9d2a2a, 0 6px 14px rgba(0,0,0,0.5);
-        }
-
-        /* INFO STRIP UNDER HERO */
-        .info-strip {
-            max-width: 1000px;
-            margin: 40px auto 60px;
+        /* IMAGE GRID SECTION */
+        .image-section {
+            max-width: 1100px;
+            margin: 40px auto;
             padding: 0 16px;
         }
 
-        .info-heading {
-            text-align: center;
-            font-size: 1.7rem;
-            margin-bottom: 10px;
-            color: #f5d27a;
-        }
-
-        .info-intro {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            color: #e0e0e0;
-            font-size: 0.98rem;
-        }
-
-        .info-grid {
+        .image-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
         }
 
-        .info-card {
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 14px;
-            padding: 18px 16px;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.45);
+        .image-grid img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+            display: block;
+            object-fit: cover;
+            height: 220px;
         }
 
-        .info-card h3 {
-            margin-top: 0;
-            margin-bottom: 8px;
-            font-size: 1.15rem;
-            color: #ffcf5f;
-        }
-
-        .info-card p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: #e4e4e4;
-            line-height: 1.5;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                padding: 40px 16px;
-                min-height: 65vh;
+        @media (max-width: 900px) {
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
+        }
 
-            .hero-title {
-                font-size: 2.2rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.15rem;
-            }
-
-            .info-grid {
+        @media (max-width: 550px) {
+            .image-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -193,48 +109,26 @@
 
     <!-- HERO SECTION -->
     <section class="hero">
-        <div class="hero-inner">
-            <h1 class="hero-title">Dorset Bikers Club</h1>
-            <p class="hero-subtitle">Friendly rides • Great people • Proper Dorset roads</p>
-            <p class="hero-text">
-                A welcoming motorcycle community for riders of all experience levels across Dorset.
-                From coastal runs and charity ride-outs to café meets and evening socials, there’s
-                always a ride – and a brew – on the go.
-            </p>
-            <a href="events.html" class="hero-btn">View Upcoming Rides</a>
-        </div>
+        <h1 class="hero-title">Dorset Bikers Club</h1>
+        <p class="hero-subtitle">Friendly rides • Great people • Dorset roads</p>
+        <p class="hero-text">
+            A welcoming motorcycle community for riders of all abilities across Dorset.
+            From coastal runs and charity ride-outs to café meets and evening socials,
+            there’s always a ride – and a brew – on the go.
+        </p>
     </section>
 
-    <!-- INFO STRIP -->
-    <section class="info-strip">
-        <h2 class="info-heading">More Than Just a Ride</h2>
-        <p class="info-intro">
-            Whether you’re on your first 125 or your tenth bike, you’ll find friendly faces,
-            safe group riding and plenty of laughs along the way.
-        </p>
-
-        <div class="info-grid">
-            <div class="info-card">
-                <h3>Regular Ride-Outs</h3>
-                <p>
-                    Planned group rides around Dorset, the coast and beyond – sensible pace, clear routes
-                    and plenty of fuel and coffee stops.
-                </p>
-            </div>
-            <div class="info-card">
-                <h3>All Riders Welcome</h3>
-                <p>
-                    New riders, returning bikers and seasoned riders are all welcome. No attitude,
-                    no pressure – just a good, safe ride.
-                </p>
-            </div>
-            <div class="info-card">
-                <h3>Events & Charity Runs</h3>
-                <p>
-                    From toy runs and fundraising events to summer meets and evening socials, there’s
-                    always something in the calendar.
-                </p>
-            </div>
+    <!-- IMAGE SHOWCASE (Your B1–B8 images) -->
+    <section class="image-section">
+        <div class="image-grid">
+            <img src="assets/images/B1.jpg" alt="">
+            <img src="assets/images/B2.jpg" alt="">
+            <img src="assets/images/B3.jpg" alt="">
+            <img src="assets/images/B4.jpg" alt="">
+            <img src="assets/images/B5.jpg" alt="">
+            <img src="assets/images/B6.jpg" alt="">
+            <img src="assets/images/B7.jpg" alt="">
+            <img src="assets/images/B8.jpg" alt="">
         </div>
     </section>
 
